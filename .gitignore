@@ -4,3 +4,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.npmignore
+# Dependency lock files (opcional si usas solo uno)
+package-lock.json
+dist

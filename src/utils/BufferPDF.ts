@@ -1,6 +1,6 @@
 import { Page } from "../layout/Page";
 import type { Data } from "../model/Properties";
-import QRCode from 'qrcode';
+import {toBuffer} from 'qrcode';
 
 
 /**
@@ -16,7 +16,7 @@ export const BufferPDF = async (data: Data): Promise<Buffer> => {
     return new Promise<Buffer>(async (resolve, reject) => {
         try {
             const QrCode = typeof data.header.order.qr === 'string'
-                ? await QRCode.toBuffer(data.header.order.qr, {
+                ? await toBuffer(data.header.order.qr, {
                     color: { dark: data.config?.color || '#000000' }
                 })
                 : undefined;

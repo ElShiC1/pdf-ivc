@@ -7,6 +7,9 @@ import { Table } from './Table';
 import { Payment } from './Payment';
 import { PaymentDetails } from './PaymentDetails';
 import { Footer } from './Footer';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 
 export class Page {
   margin = 15;
@@ -38,9 +41,11 @@ export class Page {
   }
 
   private config() {
-    this.doc.registerFont('InterRegular', 'src/asset/font/Inter_18pt-Regular.ttf');
-    this.doc.registerFont('InterSemiBold', 'src/asset/font/Inter_18pt-SemiBold.ttf');
-    this.doc.registerFont('InterBold', 'src/asset/font/Inter_18pt-Bold.ttf');
+    const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+    this.doc.registerFont('InterRegular', path.join(__dirname, '..' ,'asset', 'font', 'Inter_18pt-Regular.ttf'));
+    this.doc.registerFont('InterSemiBold', path.join(__dirname, '..' ,'asset', 'font', 'Inter_18pt-Regular.ttf'));
+    this.doc.registerFont('InterBold', path.join(__dirname, '..' ,'asset', 'font', 'Inter_18pt-Regular.ttf'));
     this.doc.strokeColor('#CCCCCC')
   }
 
