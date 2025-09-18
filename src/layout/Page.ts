@@ -38,9 +38,9 @@ export class Page {
   }
 
   private config() {
-    this.doc.registerFont('InterRegular', 'font/Inter_18pt-Regular.ttf');
-    this.doc.registerFont('InterSemiBold', 'font/Inter_18pt-SemiBold.ttf');
-    this.doc.registerFont('InterBold', 'font/Inter_18pt-Bold.ttf');
+    this.doc.registerFont('InterRegular', 'src/asset/font/Inter_18pt-Regular.ttf');
+    this.doc.registerFont('InterSemiBold', 'src/asset/font/Inter_18pt-SemiBold.ttf');
+    this.doc.registerFont('InterBold', 'src/asset/font/Inter_18pt-Bold.ttf');
     this.doc.strokeColor('#CCCCCC')
   }
 
