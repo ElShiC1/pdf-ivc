@@ -1,7 +1,6 @@
 # pdf-ivc  
-Generates customizable A4 PDF templates  
+Generates customizable A4 PDF templates ans QR code generation.  
 Returns both image and PDF as buffers.  
-Supports automatic pagination and QR code generation.
 
 ## Install
 ```sh
