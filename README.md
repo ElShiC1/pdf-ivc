@@ -7,15 +7,26 @@ Returns both image and PDF as buffers.
 npm install pdf-ivc -E
 ```
 ## Example
-
+**Function image()**
 ```js
 import PDFInvoice from "pdf-ivc";
 import fs from "node:fs"
 
+//image(scale: number) - return Promise<Buffer[]>;
 const images = await PDFInvoice(data).image(3)
-//image(scale: number);
+
 images.forEach((image, index) => {
   fs.writeFileSync(`upload/img/qr/${index}.png`, image);
 });
 ```
 
+**Function pdf()**
+```js
+import PDFInvoice from "pdf-ivc";
+import fs from "node:fs"
+
+//pdf() - return Promise<Buffer>;
+const pdf = await PDFInvoice(data).pdf()
+
+fs.writeFileSync('upload/pdf/qr/pdf.pdf', pdf)
+```
