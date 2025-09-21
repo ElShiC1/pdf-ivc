@@ -8,3 +8,4 @@ yarn-error.log*
 # Dependency lock files (opcional si usas solo uno)
 package-lock.json
 dist
+.gitignore

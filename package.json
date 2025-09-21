@@ -1,9 +1,10 @@
 {
   "name": "pdf-ivc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "description": "Layout PDF A4 convet to img or pdf buffer",
   "files": [
     "dist"
   ],
@@ -13,10 +14,15 @@
     "build": "tsc --module ES6 --outDir dist",
     "build-node": "tsc src/index.ts --outDir dist-node"
   },
-  "keywords": [],
+  "repository": "https://github.com/ElShiC1/pdf-ivc",
+  "keywords": [
+    "pdf",
+    "pdfjs",
+    "pdf-to-img",
+    "pdfkit"
+  ],
   "author": "ElShiC1",
   "license": "MIT",
-  "description": "",
   "devDependencies": {
     "@types/jest": "30.0.0",
     "@types/node": "24.2.0",
