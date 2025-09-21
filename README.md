@@ -1,7 +1,9 @@
 # pdf-ivc  
-Generates customizable A4 PDF templates ans QR code generation.  
-Returns both image and PDF as buffers.  
-<img src="https://raw.githubusercontent.com/ElShiC1/pdf-ivc/refs/heads/main/asset/upload/img/qr/4.png" width="500" alt="pdf-ivc" />
+Genera plantillas PDF personalizables en formato A4 con generación de códigos QR. Retorna tanto las imágenes como el documento PDF en formato Buffer. Paginación automática se crea una nueva página por cada 12 ítems registrados.  
+#### 👁‍🗨 [Visualizar Ejemplo](https://raw.githubusercontent.com/ElShiC1/pdf-ivc/refs/heads/main/asset/upload/img/qr/4.png)
+
+
+
 ## Install
 ```sh
 npm install pdf-ivc -E
@@ -264,4 +266,34 @@ interface Config {
       textColor?: string;
       bgResaltLast?: string;
     };
+```
+
+#### Data
+La siguiente interfaz define la estructura de datos que debe ser ingresada para generar el documento PDF.
+```ts
+export interface Data {
+  header: {
+    enterprise: Enterprise;
+    order: Order;
+  };
+  details: {
+    colsOne: Cols;
+    colsTwo: Cols;
+  };
+  table: Table;
+  payment: Payment;
+  paymentDetails: PaymentDetails;
+  footer: Footer;
+  config?: {
+    color?: string;
+    borderColor?: string;
+    qrColor?: string;
+    table?: {
+      bgResult?: string;
+      textColor?: string;
+      bgResaltLast?: string;
+    };
+  };
+}
+
 ```
