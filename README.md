@@ -1,6 +1,6 @@
 # pdf-ivc  
 Genera plantillas PDF personalizables en formato A4 con generación de códigos QR. Retorna tanto las imágenes como el documento PDF en formato Buffer. Paginación automática se crea una nueva página por cada 12 ítems registrados.  
-#### 👁‍🗨 [Visualizar Ejemplo](https://raw.githubusercontent.com/ElShiC1/pdf-ivc/refs/heads/main/asset/upload/img/qr/4.png)
+#### 👁‍🗨 [Visualizar Plantilla](https://raw.githubusercontent.com/ElShiC1/pdf-ivc/refs/heads/main/asset/upload/img/qr/4.png)
 
 
 
