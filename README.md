@@ -270,6 +270,107 @@ interface Config {
 
 #### Data
 La siguiente interfaz define la estructura de datos que debe ser ingresada para generar el documento PDF.
+
+```ts
+const data: Data = {
+    header: {
+        enterprise: {
+            logo: 'img/logo.png',
+            name: "PDF-IVC, Corp",
+            aditional: 'www.pdf-ivc.com',
+            indificatorTribute: 'RUC 0222351515',
+        },
+        order: {
+            qr: 'www.pdf-ivc.com',
+            id: 'N° 0001-2025',
+            aditional: 'Av. Angamos Nro. 1805 - 01234567',
+            createAt: '01 Enero 2025 - 08:07 PM',
+            payment: { text: 'Pendiente - Efectivo', color: 'green' },
+        }
+    },
+    details: {
+        colsOne: {
+            title: "Cliente", 
+            "1": {
+                Nombre: "Emilio Sánchez Pérez Mamani",
+                DNI: "DNI 12345678"
+            }, "2": {
+                Telefono: "+51 912345789",
+                "Codigo Postal": "2",
+            }, "3": {
+                "Email": "emilio@pdf_ivc.com",
+                "Nr°": "123"
+            }
+        },
+        colsTwo: {
+            title: "Envio",
+            "1": {
+                Empresa: "Shalom",
+                Clave: "12345"
+            },
+            "2": {
+                Ubicacion: "Peru, Lima, Chorrillos",
+                "Codigo Postal": "140105",
+            },
+            "3": {
+                "Dirección de Domicilio": "Jr. Peru 1234",
+                "Nr°": "123"
+            }
+        },
+    },
+    table: {
+        header: [
+            "ID",
+            "Name",
+            "Description",
+            { relevant: ["Quantity", "Price U.", "Total Price"] },
+        ],
+        data: Array.from({ length: cols }, (_, i) => [
+            `U${1000 + i}`, // ID
+            `Apple ${1 + i}`,
+            `Apple delicous bad english${20 + i}`, // Edad
+            { relevant: [`${i + 1}`, `S/${i + 1}.00`, `S/${i + 100}.00`] },
+        ]),
+        result: [
+            { key: "OP. GRAVADA", value: "39.33" },
+            { key: "IGV -18%", value: "7.07" },
+            { key: "Total Import", value: "46.40" }
+        ]
+    },
+    payment: {
+        "Nr° Cuenta": "191-23456789-0-12",
+        "Empresa": "PDF-IVC S.A.C",
+        logo: 'img/payment-2.png'
+    },
+    paymentDetails: {
+        "Nr° Operación": "123456",
+        "Banco": "BBVA",
+        "Método de pago": "Cuenta Corriente",
+        "Operacion": "24 de Enero del 2025 - 08:07 PM",
+        logo: 'img/payment-2.png'
+    },
+    footer: {
+        logo: 'img/logo.png',
+        text: 'Gracias por la compra',
+        contact: 'www.pdf-ivc.com'
+    },
+    config: {
+        color: '#4C63ED',
+        borderColor: '#E8E8E8',
+        qrColor: '#4C63ED',
+        table: {
+            bgResaltLast: 'white',
+            textColor: 'black',
+            bgResult: 'blue'
+        }
+    }
+}
+```
+
+
+
+
+`Type: Data`
 ```ts
 export interface Data {
   header: {
