@@ -54,6 +54,10 @@ interface Enterprise {
     aditional: string,
 }
 ```
+`Type: PDFKit.Mixins.ImageSrc`
+```ts
+type ImageSrc = Buffer | ArrayBuffer | string;
+```
 
 `Order`
 Este objeto representa los datos asociados a una orden de compra o solicitud de servicio. Se utiliza para generar documentos PDF personalizados con información relevante del pedido.
